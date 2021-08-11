@@ -160,14 +160,7 @@ jQuery('.teaser-content-with-carousel').each(function(){
 });
 
 
-// news teaser carousel
-$('.news-teaser-module.with-carousel .owl-carousel').owlCarousel({
-    loop:false,
-    dots:false,
-    margin:0,
-    nav:true,
-    items: 1
-});
+
 
 // product showcase carousel
 $('.product-showcase .owl-carousel').owlCarousel({
