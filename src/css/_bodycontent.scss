@@ -4795,20 +4795,20 @@ html{
 
 
 
-/*// mt app season 2 start*/
+// mt app season 2 start
 .mt.season-2 {
-    /*// vars*/
+    // vars
     --season-2-grey-type-one: #121217;
     --season-2-grey-type-two: #121217A7;
     --season-2-grey-type-three: #33333b;
     --season-2-grey-type-one-rgb: 18, 18, 23;
-    /*// vars*/
-   /* // basic*/
+    // vars
+    // basic
     .force-margin-top-none {
         margin-top: 0px !important;
     }
-   /* // basic*/
-    /*// the-tabelle start*/
+    // basic
+    // the-tabelle start
     .the-tabelle.app-view.season-2-view {
         padding: 15px;
         border-radius: 7px;
@@ -4938,8 +4938,8 @@ html{
             }
         }
     }
-    /*// the-tabelle end*/
-    /*// news-teaser-module start*/
+    // the-tabelle end
+    // news-teaser-module start
     .news-teaser-module.season-2-view {
         .owl-carousel .owl-stage-outer {
             overflow: visible;
@@ -4989,7 +4989,10 @@ html{
             display: inline-block;
         }
     }
-   /* // news-teaser-module end*/
+    .news-teaser-slider-element {
+        overflow: hidden;
+    }
+    // news-teaser-module end
 }
 
-/*// mt app season 2 end*/
+// mt app season 2 end
