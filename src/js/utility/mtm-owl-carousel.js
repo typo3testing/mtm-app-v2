@@ -5,11 +5,12 @@ class MtmOwlCarousel {
   loadOwlCarouselSingle(cssClass){
       $.getScript(scriptOwl, function(data, textStatus) {
             $(cssClass).owlCarousel({
-                loop: true,
+                loop: false,
                 dots: false,
-                margin: 30,
-                nav: true,
+                margin: 5,
+                nav: false,
                 items: 1,
+                center: true
             });
        });
   };
