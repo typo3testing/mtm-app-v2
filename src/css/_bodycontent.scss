@@ -4995,6 +4995,152 @@ html{
         overflow: hidden;
     }
     // news-teaser-module end
+    // app filter
+    .overlay-app-filter {
+        height: 100%;
+        background-color: var(--season-2-danger-color-type-one);
+        text-align: center;
+        padding: 30px;
+        color: white;
+        position: relative;
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 30px;
+            line-height: 23px;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 23px;
+            margin-bottom: 15px;
+        }
+        .hint-close {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            text-align: right;
+            z-index: 1;
+            .activity {
+                padding: 20px;
+                display: inline-block;
+                i {
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: left top;
+                    background-image: url(../static/images/close-icon-white.svg);
+                }
+            }
+        }
+    }
+    // app filter
+    // date-selection-module
+    .date-selection-module {
+        &>.row {
+            margin-left: -2px;
+            margin-right: -2px;
+            &>.my-col {
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+        }
+        .date-input {
+            .trigger {
+                text-align: center;
+                border-radius: 25px;
+                font-size: 20px;
+                border: 2px solid;
+                overflow: hidden;
+                &.selected,
+                &.first-selected {
+                    border-color: var(--season-2-danger-color-type-one);
+                }
+                input {
+                    margin: 0px;
+                    padding: 0px;
+                    width: 100%;
+                    height: 46px;
+                    text-align: center;
+                    border: none;
+                    background-color: transparent;
+                    padding: 0 5px;
+                }
+            }
+        }
+        .bis-tag {
+            text-align: center;
+            font-size: 20px;
+            span {
+                display: inline-block;
+            }
+        }
+    }
+    // date-selection-module
+    // calender
+    .calendar-day.calendar-day-today .calendar-day-number {
+        color: white;
+        background-color: var(--season-2-danger-color-type-one);
+    }
+    .calendar-day.calendar-day-selected .calendar-day-number {
+        background-color: var(--season-2-grey-type-one);
+    }
+    // calender
+    //news-list-filter
+    .news-list-filter {
+        .filter-search-filed {
+            .site-button.with-search {
+                width: 100%;
+            }
+            .search-dropdown-trigger {
+                display: block;
+            }
+        }
+        .custom-inputText-block {
+            display: block;
+            input {
+                width: 100%;
+                pointer-events: none;
+            }
+            .site-button.with-calender {
+                width: 100%;
+                padding: 9px 35px 8px 20px;
+                background-position: right 15px center;
+                text-align: left;
+                position: relative;
+                z-index: 5;
+                pointer-events: auto;
+                &:hover {
+                    border-color: inherit !important;
+                    color: inherit !important;
+                    background-image: url(../static/images/calendar-light.svg) !important;
+                }
+                &.choosed {
+                    background-image: url(../static/images/close-icon-white.svg);
+                }
+                em {
+                    font-style: normal;
+                }
+                i.clear {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 40px;
+                    height: 40px;
+                    z-index: 10;
+                    display: block;
+                }
+            }
+        }
+    }
+    //news-list-filter
 }
 
 // mt app season 2 end

@@ -1,0 +1,126 @@
+<template>
+  <div class="page has-no-top-banner" data-name="app-news-filter-page">
+	
+	<!-- header -->
+    <header class="header scrolled">
+        <div class="main-wrap block-section default-left-right-padding clearfix">
+            
+           
+           <div class="app-back-link">
+           	<a href="#" class="app-back back">
+              <i><img src="static/images/carousel-prev-light.svg" width="14"></i><span>ZURÜCK</span> 
+            </a>
+           </div>
+
+
+         
+
+        </div>
+
+        
+
+    </header>
+    <!-- header -->
+
+    <!-- Scrollable page content-->
+    <div class="page-content page-bottom-gap-type-one">
+        
+	
+           <!-- module header -->
+           <div class="element element-gap-Biggertiny block-section centered-container clearfix">
+            <div class="container container-width-default clearfix">
+               <div class="module-header light clearfix pull-text-center">
+                   <h2><span>Zeitraum wählen</span></h2>
+               </div>
+            </div>  
+           </div>
+           <!-- module header -->
+
+           <!-- news-calender-filter-module -->
+           <div class="element element-gap-Biggertiny block-section centered-container clearfix">
+            <div class="container container-width-default clearfix">
+              <div class="news-calender-filter-module clearfix">
+
+                  <!-- date selection module -->
+                  <div class="date-selection-module clearfix element element-gap-Lgnormal">
+                    <div class="row flex-row flex-vertical">
+                      <div class="date-input col-xs-5 my-col force-margin-top-none">
+                        <div class="trigger trigger-from"><input type="text" value="10. 01. 2021" readonly class="news-filter-datepicker-from"></div>
+                      </div>
+
+                      <div class="bis-tag col-xs-2 my-col force-margin-top-none">
+                        <span>BIS</span>
+                      </div>
+
+                      <div class="date-input col-xs-5 my-col force-margin-top-none">
+                        <div class="trigger trigger-to"><input type="text" value="10. 01. 2021" readonly class="news-filter-datepicker-to"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- date selection module -->
+
+              </div>
+            </div>
+          </div>
+           <!-- news-calender-filter-module -->
+ 
+            
+    </div>
+    <!-- Scrollable page content-->
+
+
+  </div>
+</template>
+<script>
+    import $$ from 'dom7';
+    export default {
+        // custom 
+        on: {
+            pageMounted: function(e, page) {
+                this.$f7ready((f7) => {
+
+
+                    // news filter calender
+                    jQuery('.date-selection-module .date-input .trigger').click(function(e) {
+                        jQuery('.date-selection-module .date-input .trigger').removeClass('selected');
+                        jQuery(this).addClass('selected');
+                        e.stopPropagation();
+                    });
+
+
+                    var NewsFilterDateChooseCalenderFrom = f7.calendar.create({
+                        inputEl: '.news-filter-datepicker-from',
+                        dateFormat: 'dd,mm,yy',
+                        on: {
+                            close: function() {
+                                jQuery('.date-selection-module .date-input .trigger.trigger-from').removeClass('selected');
+                            }
+                        }
+                    });
+                    jQuery('.news-filter-datepicker-from').trigger('click');
+
+                    var NewsFilterDateChooseCalenderTo = f7.calendar.create({
+                        inputEl: '.news-filter-datepicker-to',
+                        dateFormat: 'dd,mm,yy',
+                        on: {
+                            close: function() {
+                                jQuery('.date-selection-module .date-input .trigger.trigger-to').removeClass('selected');
+                            }
+                        }
+                    });
+
+
+
+
+
+
+
+
+
+
+                });
+            },
+        },
+        // custom
+    };
+</script>
